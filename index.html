@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Rats in the Restaurant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="Misc/css/style.css">    
+  <style>
+    html, body { 
+      /* height: 100%; */
+      }
+
+      #mouse1 {
+      /* height: 50px; */
+      /* margin-top: 35px;
+      margin-bottom: 65px; */
+      animation-name:  goLeft;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+    }
+    img{
+      height: 6em;
+      
+      margin-left: 3em;
+    }
+    .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+}
+@-webkit-keyframes goLeft  {
+  {
+    right: -500%;
+    transform: translateX(0);
+  }
+  100% {
+    left: 0%%;
+    transform: translateX(300%);
+  }
+}
+
+    keyframes goLeft {
+    from {
+      -webkit-transform: translate(0,0);
+      margin-right: 100%;
+      width: 300%;
+    }
+
+    to {
+      -webkit-transform: translate(980px,0);
+      margin-left: 0%;
+      width: 25%;
+    }
+} 
+
+.description {
+padding: 1em;
+margin-top: 3em;
+margin-bottom: 1rem;
+}
+
+  </style>
+
+  </head>
+ <body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-lg navbar-light" id="navMain">
+  </nav>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-1">Rats in the Restaurant?</h1>
+    
+    <p class="lead"  style="text-align:center">Los Angeles, California</p>
+    <hr class="my-2">
+      <div class="preload" id="mouse1"></div>
+
+    <hr class="my-2">
+    <p></p>
+    <p class="lead">
+    Project Description
+    </p>
+
+    <p>
+      Los Angeles County implemented a restaurant letter grading system in 1998. The nation’s most populous county, Los Angeles, has more than 25,000 restaurants. The letter grades are based on a score. The score starts at 100 and is reduced by violations found by public health inspectors. As you might expect, an A grade is 100 - 90 points, a B grade is 89 - 80 points, and a C grade is 79 -70 points. According to the Los Angeles Department of Public Health officials, the implementation of this grading system has improved consumer information and created a cultural awareness of food safety. The Department conducts nearly 50,000 restaurant inspections each year.
+    </p>
+    <p>
+      Our quest is to figure out where is it safest to eat in Los Angeles County if the restaurant that received a violation!
+    </p>
+    <p>
+      Compiled dashboards are accessible with the top navigation bar
+    </p>
+    
+
+    
+
+  </div>
+
+
+</div>
+
+  
+
+<footer class="footer" id="footer">
+</footer>
+  <script src="Misc/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+
+
+  var mouseyImages = ['Misc/images/m_da.svg', 'Misc/images/m_legs.svg', 'Misc/images/m_sleep.png', 'Misc/images/m_up.svg', 'Misc/images/m_sv.svg', 'Misc/images/m_ls.svg' ];
+  let mouseyDiv = document.getElementById('mouse1');
+  var arrayLength = mouseyImages.length;
+  for (let i=1; i<arrayLength; i++) {
+    
+      setTimeout( function timer(){
+        mouseyDiv.innerHTML += '<img src=\"'+mouseyImages[i]+'\"  >';
+      }, i*1500 );
+
+
+
+
+}
+
+</script>
+
+ </body>
+</html>
